@@ -1,0 +1,28 @@
+{
+  "name": "degreeworks-2.0-be",
+  "version": "1.0.0",
+  "description": "back-end for degreeworks-2.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1John1Liu/degreeworks-2.0-be.git"
+  },
+  "keywords": [
+    "university-of-south-florida",
+    "USF",
+    "degreeworks",
+    "degreeworks-2.0-be"
+  ],
+  "author": "John Liu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1John1Liu/degreeworks-2.0-be/issues"
+  },
+  "homepage": "https://github.com/1John1Liu/degreeworks-2.0-be#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
