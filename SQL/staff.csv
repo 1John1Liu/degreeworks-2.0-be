@@ -1,0 +1,11 @@
+date_hired,SSN,birth_date,first_name,last_name,email,phone
+6/12/2015,123456789,2/14/1985,John,Doe,johndoe@example.com,5551234567
+9/22/2017,987654321,7/25/1990,Jane,Smith,janesmith@example.com,5552345678
+4/3/2019,112345678,11/30/1982,Alice,Johnson,alice.johnson@example.com,5553456789
+1/18/2021,223456789,3/11/1988,Bob,Brown,bob.brown@example.com,5554567890
+11/30/2016,334567890,5/20/1992,Michael,Davis,michael.davis@example.com,5555678901
+7/17/2018,445678901,10/4/1987,Emily,Martinez,emily.martinez@example.com,5556789012
+12/15/2020,556789012,9/12/1993,David,Garcia,david.garcia@example.com,5557890123
+8/21/2022,667890123,4/18/1991,Sophia,Wilson,sophia.wilson@example.com,5558901234
+5/29/2017,778901234,6/5/1989,James,Taylor,james.taylor@example.com,5559012345
+10/10/2016,889012345,12/22/1984,Olivia,Anderson,olivia.anderson@example.com,5550123456
