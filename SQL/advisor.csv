@@ -1,0 +1,11 @@
+date_hired,SSN,birth_date,first_name,last_name,email,phone
+2015/06/12,123456789,1985/02/14,John,Doe,john.doe@university.com,5551234567
+2017/09/22,987654321,1990/07/25,Jane,Smith,jane.smith@university.com,5552345678
+2019/04/03,112345678,1982/11/30,Alice,Johnson,alice.johnson@university.com,5553456789
+2021/01/18,223456789,1988/03/11,Bob,Brown,bob.brown@university.com,5554567890
+2016/11/30,334567890,1992/05/20,Michael,Davis,michael.davis@university.com,5555678901
+2018/07/17,445678901,1987/10/04,Emily,Martinez,emily.martinez@university.com,5556789012
+2020/12/15,556789012,1993/09/12,David,Garcia,david.garcia@university.com,5557890123
+2022/08/21,667890123,1991/04/18,Sophia,Wilson,sophia.wilson@university.com,5558901234
+2017/05/29,778901234,1989/06/05,James,Taylor,james.taylor@university.com,5559012345
+2016/10/10,889012345,1984/12/22,Olivia,Anderson,olivia.anderson@university.com,5550123456
