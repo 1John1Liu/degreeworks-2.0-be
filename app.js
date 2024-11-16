@@ -3,8 +3,7 @@ const session = require('express-session');
 const bodyParser = require('body-parser')
 const app = express();
 
-// const TWO_HOURS = 1000 * 60 * 60 * 2
-const TWO_HOURS = 1000 * 60
+const TWO_HOURS = 1000 * 60 * 60 * 2
 
 const {
   PORT = 3000,
