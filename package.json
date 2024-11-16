@@ -4,6 +4,7 @@
   "description": "back-end for degreeworks-2.0",
   "main": "app.js",
   "scripts": {
+    "dev": "nodemon app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,12 @@
   },
   "homepage": "https://github.com/1John1Liu/degreeworks-2.0-be#readme",
   "dependencies": {
-    "express": "^4.21.1"
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "standard": "^17.1.2"
   }
 }
