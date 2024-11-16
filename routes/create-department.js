@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
     );
     res.status(201).send('Department created successfully');
   } catch (error) {
-    console.error('Error creating departmentdepartment_head:', error);
+    console.error('Error creating department:', error);
     res.status(500).send('Internal Server Error');
   }
 });

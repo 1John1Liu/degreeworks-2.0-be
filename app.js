@@ -4,7 +4,11 @@ const session = require('express-session');
 const sessionConfig = require('./config/session');
 const authRoutes = require('./routes/auth');
 const dashboardRoutes = require('./routes/dashboard');
+
+// Routes for department
 const createDepartmentRoutes = require('./routes/create-department')
+const deleteDepartmentRoutes = require('./routes/delete-department')
+
 const { attachUser } = require('./middleware/auth');
 
 const app = express();
@@ -18,7 +22,10 @@ app.use(attachUser); // Attaches user from session to res.locals
 // Routes
 app.use('/', authRoutes);
 app.use('/dashboard', dashboardRoutes);
+
+// Department Routes
 app.use('/create-department', createDepartmentRoutes);
+app.use('/delete-department', deleteDepartmentRoutes);
 
 // Server
 const PORT = process.env.PORT || 3000;
