@@ -74,6 +74,25 @@ CREATE TABLE Student (
     GPA NUMERIC(3, 2)
 );
 
+-- CREATE COURSE TABLE
+CREATE TABLE Course (
+    course_ID SERIAL PRIMARY KEY,
+    major_title VARCHAR(100) NOT NULL REFERENCES Major(major_title),
+    instructor_ID INT NOT NULL REFERENCES Instructor(instructor_ID),
+    course_title VARCHAR(50),
+    course_prefix VARCHAR(10),
+    course_number INT,
+    credit INT,
+    semester VARCHAR(10),
+    year INT,
+    method VARCHAR(20),
+    days VARCHAR(20),
+    start_time TIME,
+    end_time TIME,
+    seats_cap INT,
+    seats_available INT
+);
+
 -- CREATE ENROLLMENT TABLE
 CREATE TABLE Enrollment (
     course_ID INT NOT NULL,

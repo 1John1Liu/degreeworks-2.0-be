@@ -11,7 +11,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 -- EXAMPLE FUNCTION CALL
-SELECT delete_department(1);
+--SELECT delete_department(1);
 
 -- DELETE MAJOR
 CREATE OR REPLACE FUNCTION delete_major(
@@ -26,4 +26,4 @@ END;
 $$ LANGUAGE plpgsql;
 
 -- EXAMPLE FUNCTION CALL
-SELECT delete_major('Computer Science');
+--SELECT delete_major('Computer Science');
