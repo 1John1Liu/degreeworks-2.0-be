@@ -12,7 +12,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 -- EXAMPLE FUNCTION CALL
-SELECT create_department('Computer Science', 'Dr. Smith');
+-- SELECT create_department('Computer Science', 'Dr. Smith');
 
 -- CREATE MAJOR
 CREATE OR REPLACE FUNCTION create_major(
@@ -30,7 +30,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 -- EXAMPLE FUNCTION CALL
-SELECT create_major('Computer Science', 1, 120, 'Bachelor''s');
+-- SELECT create_major('Computer Science', 1, 120, 'Bachelor''s');
 
 -- MATERIALIZED VIEW OF LOGINS
 CREATE MATERIALIZED VIEW user_logins AS
