@@ -6,7 +6,7 @@ const redirectLogin = (req, res, next) => {
 };
 
 const redirectDashboard = (req, res, next) => {
-  if (req.session.userID) return res.redirect('/dashboard');
+  if (req.session.userID) return res.redirect('http://localhost:3000/dashboard');
   next();
 };
 
