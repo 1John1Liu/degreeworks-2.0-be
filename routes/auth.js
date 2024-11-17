@@ -5,9 +5,8 @@ const { templates } = require('../views/templates');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  const { user } = res.locals;
-  res.send(templates.welcome(user));
+router.get('/', redirectLogin, (req, res) => {
+
 });
 
 router.get('/login', redirectDashboard, (req, res) => {
