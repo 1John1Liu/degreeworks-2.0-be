@@ -110,3 +110,19 @@ CREATE TABLE Advisement (
     FOREIGN KEY (advisor_ID) REFERENCES Advisor(advisor_ID),
     FOREIGN KEY (major_title) REFERENCES Major(major_title)
 );
+
+-- Add Grade attribute
+ALTER TABLE Enrollment
+ADD Grade VARCHAR(2); -- Assuming grades like A, B+, etc.
+
+-- Add Year_Taken attribute
+ALTER TABLE Enrollment
+ADD Year_Taken INT; -- Assuming it stores the year the course was taken (e.g., 2023).
+
+-- Add Semester attribute
+ALTER TABLE Enrollment
+ADD Semester VARCHAR(10); -- For example, 'Spring', 'Fall', 'Summer'.
+
+-- Add Enrollment_Date attribute
+ALTER TABLE Enrollment
+ADD Enrollment_Date DATE;
