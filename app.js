@@ -6,8 +6,7 @@ const authRoutes = require('./routes/auth');
 const dashboardRoutes = require('./routes/dashboard');
 
 // Routes for department
-const createDepartmentRoutes = require('./routes/create-department')
-const deleteDepartmentRoutes = require('./routes/delete-department')
+const departmentRoutes = require('./routes/department');
 
 const { attachUser } = require('./middleware/auth');
 
@@ -24,8 +23,7 @@ app.use('/', authRoutes);
 app.use('/dashboard', dashboardRoutes);
 
 // Department Routes
-app.use('/create-department', createDepartmentRoutes);
-app.use('/delete-department', deleteDepartmentRoutes);
+app.use('/department', departmentRoutes);
 
 // Server
 const PORT = process.env.PORT || 4000;
