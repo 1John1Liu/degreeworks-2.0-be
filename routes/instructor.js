@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
       return res.status(400).send('Invalid department ID');
     }
 
-    // Call the create_instructor function with pass_hash
+    // Call the create_instructor function
     await db.query('SELECT create_instructor($1, $2, $3, $4, $5, $6, $7, $8, $9)', [
       department_ID,
       date_hired,
@@ -41,7 +41,7 @@ router.post('/', async (req, res) => {
       last_name,
       email,
       phone,
-      pass_hash,  // Pass the pass_hash value to the function
+      pass_hash,
     ]);
     
     res.status(201).send('Instructor created successfully');
