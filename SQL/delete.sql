@@ -10,9 +10,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- EXAMPLE FUNCTION CALL
---SELECT delete_department(1);
-
 -- DELETE MAJOR
 CREATE OR REPLACE FUNCTION delete_major(
     p_major_title VARCHAR(100)
@@ -25,5 +22,14 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- EXAMPLE FUNCTION CALL
---SELECT delete_major('Computer Science');
+-- DELETE INSTRUCTOR
+CREATE OR REPLACE FUNCTION delete_instructor(
+    p_instructor_id INT
+)
+RETURNS VOID AS
+$$
+BEGIN
+    DELETE FROM Instructor
+    WHERE instructor_ID = p_instructor_id;
+END;
+$$ LANGUAGE plpgsql;
