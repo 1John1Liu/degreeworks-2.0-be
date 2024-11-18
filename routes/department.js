@@ -7,10 +7,22 @@ router.post('/', async (req, res) => {
   const { department_title, department_head } = req.body;
 
   try {
+    const checkQuery = `
+      SELECT department_ID 
+      FROM Department 
+      WHERE LOWER(department_title) = LOWER($1)
+    `;
+    const existingDepartment = await db.query(checkQuery, [department_title]);
+
+    if (existingDepartment.rows.length > 0) {
+      return res.status(409).send('Department title already exists');
+    }
+
     await db.query('SELECT create_department($1, $2)', [
       department_title,
       department_head,
     ]);
+    
     res.status(201).send('Department created successfully');
   } catch (error) {
     console.error('Error creating department:', error);
