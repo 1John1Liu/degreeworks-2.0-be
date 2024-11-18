@@ -11,6 +11,7 @@ router.post('/', async (req, res) => {
       return res.status(400).send('Invalid degree type');
     }
 
+    // Check if major already exists based on major title
     const checkQuery = `
       SELECT major_title 
       FROM Major 
