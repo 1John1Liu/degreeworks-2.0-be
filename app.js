@@ -8,6 +8,9 @@ const dashboardRoutes = require('./routes/dashboard');
 // Routes for department
 const departmentRoutes = require('./routes/department');
 
+// Routes for major
+const majorRoutes = require('./routes/major');
+
 const { attachUser } = require('./middleware/auth');
 
 const app = express();
@@ -24,6 +27,9 @@ app.use('/dashboard', dashboardRoutes);
 
 // Department Routes
 app.use('/department', departmentRoutes);
+
+// Major Routes
+app.use('/major', majorRoutes);
 
 // Server
 const PORT = process.env.PORT || 4000;
