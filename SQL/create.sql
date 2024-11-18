@@ -11,9 +11,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- EXAMPLE FUNCTION CALL
--- SELECT create_department('Computer Science', 'Dr. Smith');
-
 -- CREATE MAJOR
 CREATE OR REPLACE FUNCTION create_major(
     p_major_title VARCHAR(100),
@@ -29,8 +26,25 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- EXAMPLE FUNCTION CALL
--- SELECT create_major('Computer Science', 1, 120, 'Bachelor''s');
+-- CREATE INSTRUCTOR
+CREATE OR REPLACE FUNCTION create_instructor(
+    p_department_ID INT,
+    p_date_hired DATE,
+    p_SSN CHAR(9),
+    p_birth_date DATE,
+    p_first_name VARCHAR(50),
+    p_last_name VARCHAR(50),
+    p_email VARCHAR(100),
+    p_phone CHAR(10),
+    p_pass_hash VARCHAR(255)
+)
+RETURNS VOID AS
+$$
+BEGIN
+    INSERT INTO Instructor (department_ID, date_hired, SSN, birth_date, first_name, last_name, email, phone, pass_hash)
+    VALUES (p_department_ID, p_date_hired, p_SSN, p_birth_date, p_first_name, p_last_name, p_email, p_phone, p_pass_hash);
+END;
+$$ LANGUAGE plpgsql;
 
 -- MATERIALIZED VIEW OF LOGINS
 CREATE MATERIALIZED VIEW user_logins AS
