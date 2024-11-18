@@ -22,7 +22,6 @@ router.post('/', async (req, res) => {
       return res.status(409).send('Major title already exists');
     }
 
-    // Insert new major
     await db.query('SELECT create_major($1, $2, $3, $4)', [
       major_title,
       department_ID,
@@ -33,6 +32,27 @@ router.post('/', async (req, res) => {
     res.status(201).send('Major created successfully');
   } catch (error) {
     console.error('Error creating major:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+// Route to delete a major
+router.delete('/', async (req, res) => {
+  const { major_title } = req.body;
+
+  if (!major_title) {
+    return res.status(400).send('Major title is required');
+  }
+
+  try {
+    const deleteQuery = `
+      SELECT delete_major($1)
+    `;
+
+    await db.query(deleteQuery, [major_title]);
+    res.status(200).send('Major deleted successfully');
+  } catch (error) {
+    console.error('Error deleting major:', error);
     res.status(500).send('Internal Server Error');
   }
 });
