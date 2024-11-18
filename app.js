@@ -14,6 +14,9 @@ const majorRoutes = require('./routes/major');
 // Routes for instructor
 const instructorRoutes = require('./routes/instructor');
 
+// Routes for course
+const courseRoutes = require('./routes/course');
+
 const { attachUser } = require('./middleware/auth');
 
 const app = express();
@@ -36,6 +39,9 @@ app.use('/major', majorRoutes);
 
 // Instructor Routes
 app.use('/instructor', instructorRoutes);
+
+// Course Routes
+app.use('/course', courseRoutes);
 
 // Server
 const PORT = process.env.PORT || 4000;

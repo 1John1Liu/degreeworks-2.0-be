@@ -46,6 +46,39 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+-- CREATE COURSE
+CREATE OR REPLACE FUNCTION create_course(
+    p_major_title VARCHAR(100),
+    p_instructor_ID INT,
+    p_course_title VARCHAR(50),
+    p_course_prefix VARCHAR(10),
+    p_course_number INT,
+    p_credit INT,
+    p_semester VARCHAR(10),
+    p_year INT,
+    p_method VARCHAR(20),
+    p_days VARCHAR(20),
+    p_start_time TIME,
+    p_end_time TIME,
+    p_seats_cap INT,
+    p_seats_available INT
+)
+RETURNS VOID AS
+$$
+BEGIN
+    INSERT INTO Course (
+        major_title, instructor_ID, course_title, course_prefix, 
+        course_number, credit, semester, year, method, days, 
+        start_time, end_time, seats_cap, seats_available
+    )
+    VALUES (
+        p_major_title, p_instructor_ID, p_course_title, p_course_prefix, 
+        p_course_number, p_credit, p_semester, p_year, p_method, p_days, 
+        p_start_time, p_end_time, p_seats_cap, p_seats_available
+    );
+END;
+$$ LANGUAGE plpgsql;
+
 -- MATERIALIZED VIEW OF LOGINS
 CREATE MATERIALIZED VIEW user_logins AS
 SELECT 
