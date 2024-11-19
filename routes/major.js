@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../utility/db');
-const degree_types = require('../utility/degree_types');
+const degree_types = require('../utility/constants');
 
 router.post('/', async (req, res) => {
   const { major_title, department_ID, total_hours, degree_type } = req.body;
