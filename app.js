@@ -13,6 +13,12 @@ const dataIntegrityRoutes = require('./utility/data-integrity');
 // Routes for instructor
 const instructorRoutes = require('./routes/instructor');
 
+// Routes for course
+const courseRoutes = require('./routes/course');
+
+// Routes for staff
+const staffRoutes = require('./routes/staff');
+
 const { attachUser } = require('./middleware/auth');
 
 const app = express();
@@ -31,6 +37,12 @@ app.use('/major', majorRoutes);
 
 // Instructor Routes
 app.use('/instructor', instructorRoutes);
+
+// Course Routes
+app.use('/course', courseRoutes);
+
+// Staff Routes
+app.use('/staff', staffRoutes);
 
 // Server
 // Utility Routes

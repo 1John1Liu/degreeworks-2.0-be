@@ -7,6 +7,8 @@ router.post('/', async (req, res) => {
   const { department_title, department_head } = req.body;
 
   try {
+
+    // Check if department already exists based on department title
     const checkQuery = `
       SELECT department_ID 
       FROM Department 

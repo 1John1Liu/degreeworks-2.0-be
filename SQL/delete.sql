@@ -33,3 +33,28 @@ BEGIN
     WHERE instructor_ID = p_instructor_id;
 END;
 $$ LANGUAGE plpgsql;
+
+-- DELETE STAFF
+CREATE OR REPLACE FUNCTION delete_staff(
+    p_staff_id INT
+)
+RETURNS VOID AS
+$$
+BEGIN
+    DELETE FROM Staff
+    WHERE staff_ID = p_staff_id;
+END;
+$$ LANGUAGE plpgsql;
+
+
+-- DELETE COURSE
+CREATE OR REPLACE FUNCTION delete_course(
+    p_course_id INT
+)
+RETURNS VOID AS
+$$
+BEGIN
+    DELETE FROM Course
+    WHERE course_id = p_course_id;
+END;
+$$ LANGUAGE plpgsql;
